@@ -55,10 +55,10 @@
 (defun game-print (lst)
   ;; coerce: 強制する, 脅かすの意らしい 初めてみたけどきもい
   ;; (coerce object 'result-type) で object を result-type にかえるらしい 便利ね~
-  (princ (coerce (tweak-text
-		  (coerce
-		   (string-trim "() " (prin1-to-string lst)) 'list) t nil)
-		 'string))
+  (princ (coerce
+	  (tweak-text (coerce
+		       (string-trim "() " (prin1-to-string lst)) 'list) t nil)
+	  'string))
   (fresh-line))
 
 (defun game-repl ()
